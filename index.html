@@ -1,17 +1,118 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Runelist</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Runelist</h1>
+
+      <div class="authp">
+          <div class="login-page">
+            <div class="form">
+              <form id="sign-up">
+                <span class="far fa-user"></span>
+                <input type="text" name="credentials[email]" placeholder="Email" required>
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                <button>Sign up</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+              <form id="sign-in">
+                <span class="far fa-user"></span>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <button>Log in</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+    
+        <div class="settingsp">
+            <div class="settings-page">
+              <div class="form">
+                <form id="changePassword">
+                      <p>Change your password</p>
+                      <fieldset>
+                        <input type="password" name="passwords[old]" placeholder="Old password">
+                        <input type="password" name="passwords[new]" placeholder="New password">
+                        <input class="btn btn-dark" type="submit" value="Change password">
+                      </fieldset>
+                    </form>
+                    <form id="sign-out">
+                       <fieldset>
+                         <input class="btn btn-dark" type="submit" value="Sign out">
+                       </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+
+      <div class="main">
+          <div class="innermain">
+            <button id="getGoals">Show goals</button>
+            <button id="createGoal">New goal</button>
+            <button id="editGoal">Edit a goal</button>
+            <button id="deleteGoal">Delete a goal</button>
+            <br>
+            <button id="acc">Account</button>
+            <hr>
+    
+            <div class="grabGoalForm">
+              <form id="grabform">
+                <!-- Stuff here -->
+                <button id="grab">Show goals</button>
+                <div id="goals" class="goals"></div>
+              </form>
+            </div>
+  
+            <div class="editGoalForm">
+              <form id="editform">
+                <fieldset>
+                  <!-- stuff here -->
+                  <input type='text' name='goal[title]' placeholder="goal title">
+                  <input type='text' name='goal[info]' placeholder="goal info">
+                  <input type='text' name='goal[complete]' placeholder="true/false">
+                  <input type='text' name='goal[id]' placeholder="goal id">
+                  <button>Create</button>
+                </fieldset>
+              </form>
+            </div>
+  
+            <div class="deleteGoalForm">
+              <form id="deleteform">
+                <fieldset>
+                  <input type='text' name='goal[id]' placeholder="goal id">
+                  <button>Delete</button>
+                </fieldset>
+              </form>
+            </div>
+  
+            <div class="createGoalForm">
+              <form id="createform">
+                <fieldset>
+                  <!-- stuff here -->
+                  <input type='text' name='goal[title]' placeholder="goal title">
+                  <input type='text' name='goal[info]' placeholder="goal info">
+                  <input type='text' name='goal[complete]' placeholder="true/false">
+                  <button>Create</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
     </body>
 </html>
